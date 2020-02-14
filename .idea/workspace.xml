@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2fdedd-930e-419b-ad7d-47a4e9561358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/POC/naive.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POC/naive2.0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/scratch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/naive.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/naive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/naive2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/naive2.0.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

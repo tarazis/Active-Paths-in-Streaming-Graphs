@@ -1,4 +1,5 @@
 import copy
+from datetime import datetime
 import os
 import random
 import pandas as pd
@@ -20,15 +21,17 @@ import matplotlib.pyplot as plt
 '''
 
 activeNodes = {}
-graphN = 100 # number of nodes
+graphN = 1000 # number of nodes
 graphP = 0.3 # probability of creating edges
 graphSeed = 7
-graphK = 10 # number of k neighbors for small world
+graphK = 100 # number of k neighbors for small world
 graphTries = 100 # number of tries to get a connected graph
 TS = 1000 # number of timestamps
 
 
 def main():
+    timeNow = datetime.now()
+
     random.seed(graphSeed)
     G = genSampleGraph()
     graphPath = saveGraph(G)
@@ -51,6 +54,9 @@ def main():
     #
     # plotAndSave(G, 'original')
 
+    timeLater = datetime.now()
+    difference = timeLater - timeNow
+    print(str(difference.microseconds))
 
 def saveGraph(G):
     folderName = 'GRAPHS_' + 'SW_' + 'N' + str(graphN) + '_' + 'E' + str(G.number_of_edges()) +\
@@ -58,13 +64,14 @@ def saveGraph(G):
                  'S' + str(graphSeed)
 
     genDirectories(folderName)
-    inputFile = open(folderName + '/' + 'originalGraph.txt', 'w')
+    inputFile = open(folderName + '/' + 'originalGraph2.txt', 'w')
     inputFile.write('----- Edge List -----\n')
     edgeList = nx.generate_edgelist(G, data=False)
     for edge in edgeList:
         inputFile.write(edge + '\n')
 
     inputFile.close()
+
     return folderName
 
 # Generate sample undirected graph with 10 nodes
