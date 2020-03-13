@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 activeNodes = {}
-graphN = 1000  # number of nodes
+graphN = 10000  # number of nodes
 graphP = 0.1  # probability of creating edges
 graphK = 4  # number of k neighbors for small world
 graphTries = 100  # number of tries to get a connected graph
@@ -218,7 +218,7 @@ def randomWalk(G):
 
 
     x = 0
-    while len(stack) > 0 and random.uniform(0, 1) <= alpha:
+    while len(stack) > 0 and generateProbability():
 
         print("Current Node: " + str(currentRandomNode))
         print("Stack: " + str(stack))
@@ -277,4 +277,13 @@ def neighborsToList(neighbors):
 def iteratorLength(iterator):
     return sum(1 for _ in iterator)
 
+
+def generateProbability():
+    maxInt = 1000
+    num = random.randint(1, maxInt)
+    alphaProbability = alpha * maxInt
+    if num <= alphaProbability:
+        return True
+    elif num > alphaProbability and num <= maxInt:
+        return False
 main()

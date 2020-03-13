@@ -3,13 +3,22 @@ import random
 
 def main():
     count = 0
-    for i in range(1000000):
-        randomNum = random.uniform(0, 1)
-        if randomNum <= 0.9:
+    maxLoop = 100
+    maxInt = 1000
+    for i in range(maxLoop):
+        alpha = 0.90
+        num = random.randint(1, maxInt)
+        print (str(num))
+        alphaProbability = alpha * maxInt
+        if num <= alphaProbability:
+            # return True
+            print("keep going")
             count = count + 1
+        elif num > alphaProbability and num <= maxInt:
+            # return False
+            break
 
-    print(str(count))
-    print(str(count / 1000000))
+    print("looped " + str(count) + " time(s)")
 
 
 
