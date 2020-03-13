@@ -1,11 +1,16 @@
-def main():
-    adj = {}
-    adj['A'] = {'B': 1, 'E': 1, 'D': 1}
-    adj['B'] = {'A': 1}
+import random
 
-    del (adj['B']['A'])
-    del adj['A']
-    print(adj)
+
+def main():
+    count = 0
+    for i in range(1000000):
+        randomNum = random.uniform(0, 1)
+        if randomNum <= 0.9:
+            count = count + 1
+
+    print(str(count))
+    print(str(count / 1000000))
+
 
 
 main()

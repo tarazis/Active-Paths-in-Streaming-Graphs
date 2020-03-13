@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 
 
 activeNodes = {}
-graphN = 1000  # number of nodes
+graphN = 10  # number of nodes
 graphP = 0.1  # probability of creating edges
-graphK = 4  # number of k neighbors for small world
+graphK = 2  # number of k neighbors for small world
 graphTries = 100  # number of tries to get a connected graph
 TS = 1000  # number of timestamps
 graphSeed = 0 # graphSeed
@@ -21,6 +21,7 @@ def main():
     timeNow = datetime.now()
     G = genSampleGraph()
     graphPath = saveGraph(G)
+
     inputFilePath, inputFileName = genInputFile(graphPath)
     genActiveGraphs(inputFilePath, inputFileName, G, TS)
 

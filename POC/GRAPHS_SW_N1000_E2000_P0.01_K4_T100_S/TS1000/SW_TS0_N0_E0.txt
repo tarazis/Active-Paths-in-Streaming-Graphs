@@ -1,3 +1,0 @@
-#naive2.0.py
-# GMT Fri Feb 14 13:34:28 2020
-# 
