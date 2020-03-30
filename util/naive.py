@@ -1,3 +1,8 @@
+'''
+This is my first attempt at a naive implementation
+The code is not being developed any further, refer to BaselineApp.py for newest updates
+'''
+
 import copy
 from datetime import datetime
 import os

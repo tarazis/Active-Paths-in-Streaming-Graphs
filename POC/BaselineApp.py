@@ -19,6 +19,8 @@ Naive baseline implementation to solve the problem of maintaining active paths i
    by specifying the filename and executing python3 genConnected.py
 '''
 
+
+
 import copy
 from datetime import datetime
 import os
@@ -30,15 +32,70 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Work flow:
+# 1) Create a small-world graph (Connected)
+# 2) Create at least TS random walks
+# 3) Save all random walks in a file
+# 4) Assign each random-walk a time step
+# 5) Save a file showing all random walks and all timesteps assigned to it
+# 6) Save a file showing all time steps and all random walks assigned to it
+# 7) Create an input file matrix like before
+# 8) Generate the active sub graphs by removing inactive edges
+
+# 9) From the input file, re-generate the random-walks with timestep file!!!!
+
+
+# Notes:
+# - Document file
+# - Add github users
+# - Prepare presentation in this order:
+#       motivation
+#       positioning
+#       actual problem
+#       different approaches
+#       evaluations
+# 8)
+# 2) Create a file of each time step with the list of random walks
+#   a) Specify the number of random walks ( > time steps)
+#   b) Specify that Alpha or beta used
+#   c) Specify Number of edges, nodes, ..etc.
+#   d) Each randomwalk will be assigned a random time step
+#       e.g. randomWalk1 -> ts_1 to ts_3, randomWalk2 -> ts_2 to ts_10 ...etc.
+#   e) Save file that contains each time step with a list of its random walks
+
+# 3) Create the input file matrix from the random walks file
+
+# 4) Generate
+
+# To Do:
+#   1) Specify Number of Random Walks
+#   2) Save the output of Random Walks in a file:
+#       save: number of random walks, alpha/beta details,
+# number of randomwalks()
+# save randomwalks in file
+# every random walk wil be assigned to a timestep, time step can have multiple randomwalks!! and can intersect
+# record useful statistics for each random walk
+# Create 1 graph and create its input file that shows for each timestep there will be
+
+# create a baseline method that generates the synthetic data all over just from the input file
+# (input file has timesteps and list of randomwalks)
+#
+#hexken
+#mahto0o
+#
+# Add more documentation
+# Prepare presentation
+
+
 activeNodes = {}
-graphN = 10000  # number of nodes
+graphN = 100  # number of nodes
 graphP = 0.1  # probability of creating edges
-graphK = 4  # number of k neighbors for small world
+graphK = 5  # number of k neighbors for small world
 graphTries = 100  # number of tries to get a connected graph
-TS = 100  # number of timestamps
+TS = 10  # number of timestamps
 graphSeed = 0 # graphSeed
 
-alpha = 0.9 # probability that random-walk continues
+alpha = 0.8 # probability that random-walk continues
 
 
 def main():

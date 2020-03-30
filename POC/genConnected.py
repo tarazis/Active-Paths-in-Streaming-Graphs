@@ -1,3 +1,6 @@
+'''
+Generate connected components of a given graph as an adjacency list named *.txt
+'''
 import networkx as nx
 import matplotlib.pyplot as plt
 
