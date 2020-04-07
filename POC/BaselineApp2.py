@@ -206,21 +206,6 @@ def genInputFile(folderName, walksMap):
                 for t in range(lowerBound, upperBound + 1):
                     nodeMatrix[node, t] = 1
 
-
-        # for each time step, switch all active nodes to 1 in the matrix
-        # e.g. nodeMatrix[t=1,node=5] = 1
-        # for time in pathsData:
-        #     timeRange = time.split(",")
-        #     lowerBound = int(timeRange[0])
-        #     upperBound = int(timeRange[1])
-        #
-        #     while lowerBound <= upperBound:
-        #         for node in pathsData[time]:
-        #             # print("Activating index: " + str(node) + "," + str(lowerBound))
-        #             nodeMatrix[node, lowerBound] = 1
-        #
-        #         lowerBound = lowerBound + 1
-
         # convert the matrix into a tab separated file
         np.savetxt(inputFileName, nodeMatrix, delimiter='\t', fmt='%d')
 
@@ -327,7 +312,6 @@ def randomWalk(G):
     stack.append(currentRandomNode)
     visitedNodes[currentRandomNode] = True
     finalPath.append(currentRandomNode)
-
 
     x = 0
     while len(stack) > 0 and generateProbability():
@@ -481,23 +465,6 @@ def saveTimeMap(timeMap, walksMap, graphPath):
         time = time + 1
         # inputFile.close()
 
-    # for time in timeMap:
-    #     # RandomWalk number
-    #     result = "ts_"+ str(time) + "\n"
-    #
-    #     # Time duration
-    #     result = result + "\t" + "RandomWalks:\n"
-    #
-    #     for walk in timeMap[time]:
-    #         result = result + "\t\t"+ str(walk) + "\n"
-    #
-    #     # Line break
-    #     result = result + "--------------------------------------------------"
-    #
-    #     # print(result)
-    #     inputFile.write(result + "\n")
-    #     # inputFile.close()
-
 
 def saveTimeMapOutput(timeMap, walksMap, graphPath):
     inputFile = open(graphPath + '/' + 'timePerRandomWalksOutput.txt', 'w')
@@ -523,23 +490,6 @@ def saveTimeMapOutput(timeMap, walksMap, graphPath):
         time = time + 1
         # inputFile.close()
 
-    # for time in timeMap:
-    #     # RandomWalk number
-    #     result = "ts_"+ str(time) + "\n"
-    #
-    #     # Time duration
-    #     result = result + "\t" + "RandomWalks:\n"
-    #
-    #     for walk in timeMap[time]:
-    #         result = result + "\t\t"+ str(walk) + "\n"
-    #
-    #     # Line break
-    #     result = result + "--------------------------------------------------"
-    #
-    #     # print(result)
-    #     inputFile.write(result + "\n")
-    #     # inputFile.close()
-
 
 def listByTime(walksMap):
     i = 0
@@ -558,8 +508,6 @@ def listByTime(walksMap):
                 walksList = [path]
                 timeMap[int(t)] = walksList
     return timeMap
-
-
 
 
 main()

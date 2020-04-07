@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2fdedd-930e-419b-ad7d-47a4e9561358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/POC/BaselineApp2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/BaselineApp3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/FindActivePaths.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/GenerateData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/GenerateGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/BaselineApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/BaselineApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/GRAPHS_SW_N10000_E20000_P0.1_K4_T100_S/TS100/TS100_input.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/genConnected.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/genConnected.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/naive.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/naive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/naive2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/naive2.0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/naive3.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/naive3.0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/nx2.py" beforeDir="false" afterPath="$PROJECT_DIR$/util/nx2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/BaselineApp2.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/BaselineApp2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GRAPHS_SW_N30_E30_P0.01_K2_T100_S/TS10/TS10_input.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/~$Report.docx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

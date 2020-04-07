@@ -1,0 +1,29 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Capstone Meeting April 3:\
+- Go to 1 node, make it active, then randomly activate 2 of its neighbours\
+- you go to these new 2, and do the same.\
+- You end up with connected components\
+\
+- you can keep your generator that has non disjoint paths, it will give you good results\
+\
+\
+Methods:\
+- at every time step you know what are active nodes\
+- start at 1 active node, run a BFS to discover the rest of active nodes that are connected to it\
+- take them out of the total list of all active nodes\
+- then repeat\
+- Keep track of how much time you can do it\
+- then find another method that can find it faster\'85\'85 for the presentation to work!\
+\
+- Then do all of that for all time steps\
+\
+- Then would need to improve this by:\
+	- incrementing or something\
+	- Explore Mahta\'92s paper\
+- }
