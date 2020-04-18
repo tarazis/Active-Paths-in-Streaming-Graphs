@@ -11,10 +11,10 @@ Baseline implementation for finding active connected components in streaming gra
     1. `python3 GenerateData.py GRAPH_SW_N20_E80_P0.15_K8_T100`
     1. The input file and synthetic data will be saved in /EECS4080/GRAPH_SW_N20_E80_P0.15_K8_T100/Data
     1. You can generate as many of this as you need, they will always be random
-1. Find active paths (active connected components) by specifying by executing: `python3 FindActivePaths.py <graph folder name> <input file name.csv> `, for example:
+    1. You can always manipulate the parameter *alpha* in order to generate longer random-walks
+1. Given a graph and an input file:  Find active paths (active connected components) by specifying by executing `python3 FindActivePaths.py <graph folder name> <input file name.csv> `, for example:
     1. `python3 FindActivePaths.py GRAPH_SW_N20_E80_P0.15_K8_T100 04-18--16-57-47-input.csv`
     1. A file named *04-18--16-57-47-Output.txt* will be generated under /EECS4080/GRAPH_SW_N20_E80_P0.15_K8_T100/Data
-1. Input file
 
 
   
