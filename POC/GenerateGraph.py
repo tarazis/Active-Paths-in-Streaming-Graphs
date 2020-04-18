@@ -3,6 +3,8 @@ Project: Finding Active Paths in Streaming Graph
 
 Graph Generator
 
+GenerateGraph():
+
 Generate a sample connected graph and save it as an adjacency list in *.txt file.
 The graph is then used for applying the naive implementation on different sets of synthetic data.
 
@@ -18,14 +20,15 @@ The following code generates a connected small-world graph G with params:
 import os
 
 import networkx as nx
+import matplotlib.pyplot as plt
 
-graphN = 200
+graphN = 20
 
 # Probability of edge rewiring in the original graph G
-graphP = 0.01
+graphP = 0.15
 
 # Number of k neighbors for each node in the original graph G
-graphK = 6
+graphK = 8
 
 # Number of attempts to create a connected graph
 graphTries = 100
@@ -48,6 +51,9 @@ def main():
 # graphTries: Number of tries to create a connected graph
 def genSampleGraph():
     G = nx.connected_watts_strogatz_graph(n=graphN, k=graphK, p=graphP, tries=graphTries)  # small-world
+
+    # nx.draw(G, node_size=100, pos=nx.circular_layout(G))
+    # plt.show()
     return G
 
 
@@ -114,11 +120,13 @@ def saveGraph(G):
 def genDirectories(path):
     if not os.path.exists(path):
         os.makedirs(path)
+        os.makedirs(path + '/Data')
         return True
     else:
         return False
 
 
+# Generate the average node degree
 def getAvgNodeDegree(G, numOfNodes):
     avgNodeDegree = 0
     for (node, val) in G.degree(): # loop through nodes and their corresponding degree

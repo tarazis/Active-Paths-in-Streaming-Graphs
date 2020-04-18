@@ -2,14 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2fdedd-930e-419b-ad7d-47a4e9561358" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/POC/BaselineApp3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POC/FindActivePaths.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POC/GenerateData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/POC/GenerateGraph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/POC/previous-versions/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/BaselineApp2.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/BaselineApp2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/GRAPHS_SW_N30_E30_P0.01_K2_T100_S/TS10/TS10_input.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report/~$Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Meetings/Meeting - April 3.rtf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/BaselineApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/previous-versions/BaselineApp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/BaselineApp2.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/previous-versions/BaselineApp2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/BaselineApp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/previous-versions/BaselineApp3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/FindActivePaths.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/FindActivePaths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GRAPHS_SW_N50_E100_P0.01_K5_T100_S/TS20/TS20_input.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GRAPH_SW_N200_E600_P0.01_K6_T100/Data/04-06--11-02-51-input.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GRAPH_SW_N200_E600_P0.01_K6_T100/Data/04-06--11-03-02-input.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GRAPH_SW_N200_E600_P0.01_K6_T100/Data/04-06--11-27-47-input.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GenerateData.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/GenerateData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/GenerateGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/GenerateGraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/genConnected.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/previous-versions/genConnected.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/previous-versions/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/testGraphs/testExpected.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/Presentation/Draft.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/Presentation/MSCThesisPresentation.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/13-graph-stream-algorithms-survey.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/6173-community-detection-on-evolving-graphs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/FENNEL-streaming-graph-partitioning-for-massive-scale-graphs-wsdm14.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/FENNEL-streaming-graph-partitioning-for-massive-scale-graphs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/anagnostopoulos-Algorithms on Evolving Graphs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/chapter9-Dynamic Graph Algorithms-demetrescu.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/computing-on-datastreams.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/graph-clustering-survey.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/jakub-lacki-phd-thesis-2015-dynamic-graph-algorithms-for-connectivity-problems.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/ssdbm12-discovery-of-top-k-dense-subgraphs-in-dynamic-graph-collections.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/stoc15-space-and-time-efficient-algorithm-for-maintaining-dense-subgraphs-on-one-pass-dynamic-streams.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/survey-clustering-evolving-networks.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/vldb2012-dense-subgraph-maintenance-under-streaming-edge-weight-updates-for-real-time-story-identification.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/literature/streaming-graphs-literature/www15-efficient-densest-subgraph-computation.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +62,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/POC/previous-versions" />
       <recent name="$PROJECT_DIR$/POC" />
       <recent name="$PROJECT_DIR$/util" />
       <recent name="$PROJECT_DIR$/heavy-hitter-app" />

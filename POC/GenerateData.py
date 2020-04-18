@@ -1,7 +1,10 @@
 """
 Project: Finding Active Paths in Streaming Graph
 
+GenerateData(GraphFolderName):
+
 Synthetic Data Generator and Input File Generator:
+
 
 The synthetic data represents active components over time steps [0, t]. Synthetic data is generated as follows:
     1) Create connected components through a number of random-walks on graph G.
@@ -33,10 +36,10 @@ from random import choice
 
 import networkx as nx
 
-# Number of time steps
 import numpy as np
 
-TS = 20
+# Number of time steps
+TS = 100
 
 # Number of RandomWalks.
 numOfRandomWalks = TS + 3
@@ -310,7 +313,7 @@ def saveRandomWalks(walksMap, graphPath):
 
 # Save random walks per time step in txt
 def saveTimeMap(timeMap, walksMap, graphPath):
-    inputFile = open(graphPath + '/Data/' + timeStamped('timePerRandomWalks.txt'), 'w')
+    inputFile = open(graphPath + '/Data/' + timeStamped('syntheticData.txt'), 'w')
     time = 0
 
     # Go through t = 0 until TS - 1 and list the random-walks for each time step
@@ -319,12 +322,11 @@ def saveTimeMap(timeMap, walksMap, graphPath):
         result = "ts_" + str(time) + "\n"
 
         # Time duration
-        result = result + "\t" + "RandomWalks:\n"
-
+        result = result + "\t" + "Active Component(s):\n"
 
         if time in timeMap:
             for walk in timeMap[time]:
-                result = result + "\t\t"+ str(walk) + "\n"
+                result = result + str("\t\t") + str(walk) + "\n"
 
         # Line break
         result = result + "--------------------------------------------------"
