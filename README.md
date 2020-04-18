@@ -3,3 +3,4 @@ Baseline implementation for finding active connected components in streaming gra
 
 ## How to run:
 1. Item 1
+1. Item 2
