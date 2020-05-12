@@ -1,4 +1,4 @@
-# EECS4080
+# Learning Active Paths in Streaming Graphs Project
 Baseline implementation for finding active connected components in streaming graphs
 
 ## How to run:
