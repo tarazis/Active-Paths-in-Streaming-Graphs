@@ -22,13 +22,13 @@ import os
 import networkx as nx
 import matplotlib.pyplot as plt
 
-graphN = 20
+graphN = 1000
 
 # Probability of edge rewiring in the original graph G
-graphP = 0.15
+graphP = 0.1
 
 # Number of k neighbors for each node in the original graph G
-graphK = 8
+graphK = 5
 
 # Number of attempts to create a connected graph
 graphTries = 100
@@ -48,9 +48,9 @@ def main():
 # graphN: Number of nodes
 # graphK: Number of neighbors per node
 # graphP: Edge wiring probability
-# graphTries: Number of tries to create a connected graph
+# graphTries: Number of tries to create a connected graph, default = 100
 def genSampleGraph():
-    G = nx.connected_watts_strogatz_graph(n=graphN, k=graphK, p=graphP, tries=graphTries)  # small-world
+    G = nx.watts_strogatz_graph(n=graphN, k=graphK, p=graphP)
 
     # nx.draw(G, node_size=100, pos=nx.circular_layout(G))
     # plt.show()

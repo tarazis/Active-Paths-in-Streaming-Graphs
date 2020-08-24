@@ -25,6 +25,8 @@ The synthetic data represents active components over time steps [0, t]. Syntheti
     7) An input file is then generated based on the paths. The input file is a matrix of 0's and 1's.
        node 'i' at timestep 'j' is active if it has value 1 (e.g. inputMatrix[i][j] == 1)
 
+#TODO:
+1) Control the density: How many 1's? 10%? (across all matrix uniformly at random)
 @author Sami Tarazi
 """
 import datetime
@@ -42,10 +44,10 @@ import numpy as np
 TS = 100
 
 # Number of RandomWalks.
-numOfRandomWalks = TS + 3
+numOfRandomWalks = TS + 100
 
 # Random Walk probability
-alpha = 0.8
+alpha = 0.95
 
 # Get graph path from input
 graphPath = str(sys.argv[1])
@@ -289,7 +291,7 @@ def aggregateRandomWalks(timeMap, G):
 
 # Save random walks in a txt file for analysis purposes
 def saveRandomWalks(walksMap, graphPath):
-    inputFile = open(graphPath + '/Data/'+ timeStamped('randomWalks.txt'), 'w')
+    inputFile = open(graphPath + '/Data/' + nameFile('randomWalks.txt'), 'w')
 
     for walk in walksMap:
         # RandomWalk number
@@ -313,7 +315,7 @@ def saveRandomWalks(walksMap, graphPath):
 
 # Save random walks per time step in txt
 def saveTimeMap(timeMap, walksMap, graphPath):
-    inputFile = open(graphPath + '/Data/' + timeStamped('syntheticData.txt'), 'w')
+    inputFile = open(graphPath + '/Data/' + nameFile('syntheticData.txt'), 'w')
     time = 0
 
     # Go through t = 0 until TS - 1 and list the random-walks for each time step
@@ -338,9 +340,9 @@ def saveTimeMap(timeMap, walksMap, graphPath):
 
 
 # File naming convention, to avoid duplicate names
-def timeStamped(fname):
+def nameFile(fname):
     # This creates a timestamped filename so we don't overwrite our good work
-    return tStamp + '-' + fname
+    return tStamp + '-' + 'ALPHA'+ str(alpha) +'_TS'+ str(TS) + '_'+fname
 
 
 # File naming convention, to avoid duplicate names
@@ -364,7 +366,7 @@ def genInputFile(folderName, timeMap):
     # create zeros matrix with 'number of nodes (graphN)' rows and 'max time steps (TS)' columns
     # if isNewDirectory:
     CSV = '.csv'
-    inputFileName = folderName + '/Data/' + timeStamped('input') + CSV
+    inputFileName = folderName + '/Data/' + nameFile('input') + CSV
 
     nodeMatrix = np.zeros((graphN, TS), dtype=np.int64)
     print("graphN = " + str(graphN))
