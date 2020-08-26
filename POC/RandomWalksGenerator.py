@@ -33,6 +33,7 @@ import datetime
 import os
 import sys
 import random
+import itertools
 
 from random import choice
 
@@ -54,8 +55,22 @@ graphPath = str(sys.argv[1])
 
 tStamp = datetime.datetime.now().strftime('%m-%d--%H-%M-%S').format()
 
+# Number of nodes # TODO: Get from graph
+# numOfNodes = 100
+
+
+# percentage of active nodes across the matrix
+# activePercent = 0.7
+
 def main():
-    # tStamp = timeStamp()
+    # Generate input matrix with specified number of nodes, number of time stamps, and percentage of active nodes
+    # inputMatrix = generateInputMatrix()
+
+    # Generate CSV file containing the input matrix
+    # generateInputFile(inputMatrix)
+
+###########
+    tStamp = timeStamp()
     print(tStamp)
     # Load graph into memory
     graphFile = open(graphPath + "/Graph.txt", 'rb')
@@ -85,6 +100,48 @@ def main():
     # Generate node data based on active paths. Active node = 1, otherwise = 0
     inputFilePath, inputFileName = genInputFile(graphPath,aggregateTimeMap)
 
+#
+# def generateInputMatrix():
+#
+#     matrix = np.zeros((numOfNodes, TS), dtype=np.int64)
+#     count_target = int(round(numOfNodes * TS * activePercent))
+#
+#     count = 0
+#     while count < count_target:
+#         row_random = np.random.randint(0, numOfNodes)
+#         col_random = np.random.randint(0, TS)
+#         if matrix[row_random][col_random] == 0:
+#             matrix[row_random][col_random] = 1
+#             count = count + 1
+#
+#     return matrix
+
+
+# def generateInputFile(matrix):
+#     CSV = '.csv'
+#     inputFileName = graphPath + '/Data/' + nameFile('input2') + CSV
+#     np.savetxt(inputFileName, matrix, delimiter='\t', fmt='%d')
+#
+
+
+
+    # Hello, I am planning to come to visit new york and staying at Holiday inn the week of September 1
+    # I am curious if the hotel has a quarantine policy
+
+    #
+    # numbers_to_generate = int(round((num_rows * num_cols) * activeNodesPercent))
+    #
+    # P = np.zeros((num_rows, num_cols))
+    #
+    # row_indices = np.random.choice(num_rows, numbers_to_generate)
+    # col_indices = np.random.choice(num_cols, numbers_to_generate)
+    # # print(row_indices)
+    # # print(col_indices)
+    #
+    # P[row_indices, col_indices] = 1
+
+
+    # print(P)
 
 # Generate random-walks on graph G
 # Store all walks in a list
@@ -343,6 +400,8 @@ def saveTimeMap(timeMap, walksMap, graphPath):
 def nameFile(fname):
     # This creates a timestamped filename so we don't overwrite our good work
     return tStamp + '-' + 'ALPHA'+ str(alpha) +'_TS'+ str(TS) + '_'+fname
+    # return tStamp + '-' + 'ALPHA'+ str(activePercent) +'_TS'+ str(TS) + '_'+fname
+
 
 
 # File naming convention, to avoid duplicate names

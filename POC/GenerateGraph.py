@@ -1,19 +1,10 @@
 """
-Project: Finding Active Paths in Streaming Graph
+GenerateGraph.py
 
-Graph Generator
-
-GenerateGraph():
-
-Generate a sample connected graph and save it as an adjacency list in *.txt file.
-The graph is then used for applying the naive implementation on different sets of synthetic data.
-
-The following code generates a connected small-world graph G with params:
+The following code generates a  small-world graph G with params:
     n: number of nodes
     p: edge wiring probability
     k: number of neighbors
-
-@author Sami Tarazi
 """
 
 # Number of nodes in original graph G
@@ -30,13 +21,10 @@ graphP = 0.1
 # Number of k neighbors for each node in the original graph G
 graphK = 5
 
-# Number of attempts to create a connected graph
-graphTries = 100
-
 
 def main():
 
-    # Generate small-world connected undirected graph with specified params
+    # Generate small-world  undirected graph with specified params
     G = genSampleGraph()
 
     # Create a graph directory. Directory name is the graph's parameters.
@@ -44,11 +32,10 @@ def main():
     graphPath = saveGraph(G)
 
 
-# Generate a connected undirected Small-world graph
+# Generate an undirected Small-world graph
 # graphN: Number of nodes
 # graphK: Number of neighbors per node
 # graphP: Edge wiring probability
-# graphTries: Number of tries to create a connected graph, default = 100
 def genSampleGraph():
     G = nx.watts_strogatz_graph(n=graphN, k=graphK, p=graphP)
 
@@ -59,11 +46,20 @@ def genSampleGraph():
 
 # Save graph as adjacency list and return its directory path
 def saveGraph(G):
+    # Get  the number of nodes
     numOfNodes = G.number_of_nodes()
+
+    # Get the number of edges
     numOfEdges = G.number_of_edges()
+
+    # Get the probbability P
     probabilityP = graphP
+
+    # Get the number of neighbours per node. According to NetworkX documentation, if K is odd then each node will be
+    # connected with K - 1 neighbours. If K is even, then each node will be connected with K neighbours.
     numOfNeighbours = graphK if graphK % 2 == 0 else graphK - 1
-    numOfTries = graphTries
+
+    # Get the average node degree
     avgNodeDegree = getAvgNodeDegree(G, numOfNodes)
 
     # folder name includes details of graph:
@@ -73,7 +69,7 @@ def saveGraph(G):
     # Number of Neighbors per Node
     # Seed (if applicable)
     folderName = 'GRAPH_' + 'SW_' + 'N' + str(numOfNodes) + '_' + 'E' + str(numOfEdges) + \
-                 '_' + 'P' + str(probabilityP) + '_' + 'K' + str(numOfNeighbours) + '_' + 'T' + str(numOfTries)
+                 '_' + 'P' + str(probabilityP) + '_' + 'K' + str(numOfNeighbours) + '_' + 'T'
 
     # True if directory is newly created. False, if it already exists.
     isNewDirectory = genDirectories(folderName)
@@ -96,7 +92,6 @@ def saveGraph(G):
         paramString = "# Number of Nodes (graphN) = " + str(numOfNodes) + "\n"
         paramString += "# Number of Neighbours per Node before Rewiring (graphK) = " + str(numOfNeighbours) + "\n"
         paramString += "# Rewiring Probability (graphP) = " + str(probabilityP) + "\n"
-        paramString += "# Number of Tries (graphTries) = " + str(graphTries) + "\n"
         paramString += "# Number of Edges = " + str(numOfEdges) + "\n"
         paramString += "# Average Node Degree = " + str(avgNodeDegree) + "\n"
         paramString += "\n\n"
