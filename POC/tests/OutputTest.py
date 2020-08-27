@@ -55,6 +55,7 @@ def main():
         currentTS = ""
 
         for line in outPutFile:
+            print("line number: " + str(lineNumber))
 
             # Strip line from output file
             strippedLine = line.strip()
@@ -64,20 +65,27 @@ def main():
                 currentTS = strippedLine
 
             # If this is a line of an active component, do the following:
-            if strippedLine[0] == '[':
+            if strippedLine[0] == "{":
+                print(strippedLine)
 
-                # Extract active component from the output file (always starts with '[')
-                component_output = ast.literal_eval(strippedLine)
+                # Extract active component from the output file (always starts with '{')
+                component_output = ast.literal_eval("[" + strippedLine[1:len(strippedLine) - 1] + "]")
+                print("converted to list")
 
                 # Sort the active component
                 component_output.sort()
 
+                # Extract the active component from BFS output
+
+
                 # Extract the active component from the synthetic data file
                 strippedLine_data = syntheticDataFileLines[lineNumber - 1].strip()
+                print("synthetic data: ")
+                print(strippedLine_data)
                 component_data = ast.literal_eval("[" + strippedLine_data[1:len(strippedLine_data) - 1] + "]")
 
                 # Sort the active component
-                print(component_data)
+                # print(component_data)
                 component_data.sort()
 
                 # Aggregate active components to their respective lists

@@ -17,6 +17,7 @@ For each time stamp:
     Write the list of active components in an output file
 
 """
+import random
 import re
 import sys
 import timeit
@@ -52,11 +53,14 @@ def main():
     # Read graph from file
     G = nx.read_adjlist(graphFile)
 
+    # Transform input file into a matrix
+    inputMatrix = inputFileToMatrix(inputFilePath)
+
     # Start timer to measure running time
     start = timeit.default_timer()
 
     # Main method to generate active paths for each time step
-    generateActivePaths(G, inputFilePath)
+    generateActivePaths(G, inputMatrix)
 
     # Stop timer
     stop = timeit.default_timer()
@@ -78,19 +82,19 @@ def main():
 # @param original G The original graph
 # @param inputFile the input file csv
 # @return list of active paths per time stamp
-def generateActivePaths(originalG, inputFile):
+def generateActivePaths(originalG, inputMatrix):
 
     # For each time stamp t
     for t in range(TS):
 
-        # Transform input file into a matrix
-        inputMatrix = inputFileToMatrix(inputFile)
+        # Start timer to measure running time
+        start = timeit.default_timer()
 
         # Get list of active nodes
         activeNodesList = getActiveNodesList(inputMatrix, t)
 
         # initialize visited nodes list. NOTE: only active nodes will be added here.
-        visitedNodes = []
+        visitedNodes = set()
 
         # List of active components
         listOfActiveComponents = []
@@ -98,20 +102,20 @@ def generateActivePaths(originalG, inputFile):
         # BFS to explore active nodes using the original graph
         while len(activeNodesList) > 0:
             # Choose node uniformly at random from list of active nodes
-            currentRandomNode = choice(activeNodesList)
+            currentRandomNode = random.sample(activeNodesList, 1)[0]
 
             # Initialize queue and push initial node
             queue = [str(currentRandomNode)]
 
             # Mark node as visited
-            visitedNodes.append(str(currentRandomNode))
+            visitedNodes.add(str(currentRandomNode))
 
             while len(queue) > 0:
                 # Find node first in the queue
                 currentNode = queue[0]
 
                 # Find neighbours of current node
-                neighbours = list(originalG.neighbors(str(currentNode)))
+                neighbours = set(originalG.neighbors(str(currentNode)))
 
                 # Loop through neighbours
                 for neighbour in neighbours:
@@ -127,7 +131,7 @@ def generateActivePaths(originalG, inputFile):
                             queue.append(str(neighbour))
 
                             # Mark as visited
-                            visitedNodes.append(str(neighbour))
+                            visitedNodes.add(str(neighbour))
 
                 # Once all neighbours have been exhausted, remove that node from the list of active nodes.
                 activeNodesList.remove(currentNode)
@@ -139,7 +143,10 @@ def generateActivePaths(originalG, inputFile):
             listOfActiveComponents.append(visitedNodes)
 
             # clear list of visited nodes for next iteration of BFS.
-            visitedNodes = []
+            visitedNodes = set()
+
+        # Stop timer
+        stop = timeit.default_timer()
 
         # Save active components info in output file
         outputFile.write("ts_" + str(t) + ":\n")
@@ -147,7 +154,13 @@ def generateActivePaths(originalG, inputFile):
 
         for component in listOfActiveComponents:
             outputFile.write("\t\t" + str(component) + "\n")
+
+        # Measure running time
+        runningTime = stop - start
+
+        # outputFile.write("\tRunning time: " + str(runningTime) + "\n")
         outputFile.write("--------------------------------------------------\n")
+
 
 
 # Transform input file CSV into a matrix of 1's and 0's indicating active and inactive nodes respectively
@@ -171,14 +184,14 @@ def getActiveNodesList(inputMatrix, t):
     listOfNodes = list(inputMatrix[t])
 
     # List of active nodes
-    activeNodesList = []
+    activeNodesList = set()
 
     # Go through each node. If node is active, add it to list of active nodes.
     nodeNumber = 0
     for x in listOfNodes:
         # if node is active, append it to list of active nodes
         if listOfNodes[nodeNumber] == 1:
-            activeNodesList.append(str(nodeNumber))
+            activeNodesList.add(str(nodeNumber))
 
         # Increment nodeNumber
         nodeNumber = nodeNumber + 1
