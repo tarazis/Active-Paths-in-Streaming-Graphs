@@ -7,12 +7,12 @@ The following code generates a  small-world graph G with params:
     k: number of neighbors
 """
 
-# Number of nodes in original graph G
 import os
 
 import networkx as nx
 import matplotlib.pyplot as plt
 
+# Number of nodes in original graph G
 graphN = 10000000
 
 # Probability of edge rewiring in the original graph G
@@ -52,7 +52,7 @@ def saveGraph(G):
     # Get the number of edges
     numOfEdges = G.number_of_edges()
 
-    # Get the probbability P
+    # Get the probability P
     probabilityP = graphP
 
     # Get the number of neighbours per node. According to NetworkX documentation, if K is odd then each node will be

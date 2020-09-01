@@ -1,3 +1,11 @@
+"""
+DensityGenerator.py
+
+
+
+
+"""
+
 import datetime
 import sys
 
@@ -8,7 +16,7 @@ import numpy as np
 graphPath = str(sys.argv[1])
 
 # percentage of active nodes across the matrix
-density = 0.1
+density = 0.05
 
 # Number of time steps
 TS = 1000

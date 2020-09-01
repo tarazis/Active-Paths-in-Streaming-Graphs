@@ -1,10 +1,7 @@
 """
-Project: Finding Active Paths in Streaming Graph
+RandomWalksGenerator.py
 
-GenerateData(GraphFolderName):
-
-Synthetic Data Generator and Input File Generator:
-
+Randomwalks-based Synthetic Data Generator
 
 The synthetic data represents active components over time steps [0, t]. Synthetic data is generated as follows:
     1) Create connected components through a number of random-walks on graph G.
@@ -17,7 +14,7 @@ The synthetic data represents active components over time steps [0, t]. Syntheti
 
     4) Repeat for a fixed number numOfRandomWalks
 
-    5) Each random-walk is will be assigned a time duration [t, t'], where t' can be adjusted with param k.
+    5) Each random-walk will be assigned a time duration [t, t'], where t' can be adjusted with param k.
 
     6) Now each time step: 0, 1, 2..etc. will have a list of random-walks (i.e. active paths).
        e.g. t1: {[A,B,C], [CDE]}, t2: {[A,B,C], [D,F]}
@@ -25,8 +22,6 @@ The synthetic data represents active components over time steps [0, t]. Syntheti
     7) An input file is then generated based on the paths. The input file is a matrix of 0's and 1's.
        node 'i' at timestep 'j' is active if it has value 1 (e.g. inputMatrix[i][j] == 1)
 
-#TODO:
-1) Control the density: How many 1's? 10%? (across all matrix uniformly at random)
 @author Sami Tarazi
 """
 import datetime
@@ -55,21 +50,9 @@ graphPath = str(sys.argv[1])
 
 tStamp = datetime.datetime.now().strftime('%m-%d--%H-%M-%S').format()
 
-# Number of nodes # TODO: Get from graph
-# numOfNodes = 100
-
-
-# percentage of active nodes across the matrix
-# activePercent = 0.7
 
 def main():
-    # Generate input matrix with specified number of nodes, number of time stamps, and percentage of active nodes
-    # inputMatrix = generateInputMatrix()
 
-    # Generate CSV file containing the input matrix
-    # generateInputFile(inputMatrix)
-
-###########
     tStamp = timeStamp()
     print(tStamp)
     # Load graph into memory
@@ -100,48 +83,6 @@ def main():
     # Generate node data based on active paths. Active node = 1, otherwise = 0
     inputFilePath, inputFileName = genInputFile(graphPath,aggregateTimeMap)
 
-#
-# def generateInputMatrix():
-#
-#     matrix = np.zeros((numOfNodes, TS), dtype=np.int64)
-#     count_target = int(round(numOfNodes * TS * activePercent))
-#
-#     count = 0
-#     while count < count_target:
-#         row_random = np.random.randint(0, numOfNodes)
-#         col_random = np.random.randint(0, TS)
-#         if matrix[row_random][col_random] == 0:
-#             matrix[row_random][col_random] = 1
-#             count = count + 1
-#
-#     return matrix
-
-
-# def generateInputFile(matrix):
-#     CSV = '.csv'
-#     inputFileName = graphPath + '/Data/' + nameFile('input2') + CSV
-#     np.savetxt(inputFileName, matrix, delimiter='\t', fmt='%d')
-#
-
-
-
-    # Hello, I am planning to come to visit new york and staying at Holiday inn the week of September 1
-    # I am curious if the hotel has a quarantine policy
-
-    #
-    # numbers_to_generate = int(round((num_rows * num_cols) * activeNodesPercent))
-    #
-    # P = np.zeros((num_rows, num_cols))
-    #
-    # row_indices = np.random.choice(num_rows, numbers_to_generate)
-    # col_indices = np.random.choice(num_cols, numbers_to_generate)
-    # # print(row_indices)
-    # # print(col_indices)
-    #
-    # P[row_indices, col_indices] = 1
-
-
-    # print(P)
 
 # Generate random-walks on graph G
 # Store all walks in a list
@@ -403,7 +344,6 @@ def nameFile(fname):
     # return tStamp + '-' + 'ALPHA'+ str(activePercent) +'_TS'+ str(TS) + '_'+fname
 
 
-
 # File naming convention, to avoid duplicate names
 def timeStamp(fmt='%m-%d--%H-%M-%S'):
     import datetime
@@ -439,18 +379,6 @@ def genInputFile(folderName, timeMap):
                 for node in walk:
                     nodeMatrix[int(node), time] = 1
         time = time + 1
-
-
-    # for walk in walksMap:
-    #     time = (walksMap[walk][0]).split(",")
-    #     lowerBound = int(time[0])
-    #     upperBound = int(time[1])
-    #
-    #     path = walksMap[walk][1]
-    #     for node in path:
-    #         node = list(map(int, node))
-    #         for t in range(lowerBound, upperBound + 1):
-    #             nodeMatrix[node, t] = 1
 
     # convert the matrix into a tab separated file
     np.savetxt(inputFileName, nodeMatrix, delimiter='\t', fmt='%d')
