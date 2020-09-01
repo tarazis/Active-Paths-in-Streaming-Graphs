@@ -13,13 +13,13 @@ import os
 import networkx as nx
 import matplotlib.pyplot as plt
 
-graphN = 1000
+graphN = 10000000
 
 # Probability of edge rewiring in the original graph G
-graphP = 0.1
+graphP = 0.001
 
 # Number of k neighbors for each node in the original graph G
-graphK = 5
+graphK = 8
 
 
 def main():

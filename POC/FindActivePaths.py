@@ -16,6 +16,11 @@ For each time stamp:
 
     Write the list of active components in an output file
 
+    Note: The current implementation is slow because it assumes a connected graph
+          Time complexity: O(numOfActiveNodes * (U + V)) which is worst case O(N^2).
+          This is slow because multiple BFS run for each active component. To fix this issue, modify the BFS
+          implementation to account for a disconnected graph. this is a TODO.
+
 """
 import random
 import re
@@ -69,7 +74,7 @@ def main():
     runningTime = stop - start
 
     # Add running time to output file
-    outputFile.write("Running time: " + str(runningTime))
+    outputFile.write("Running time: " + str(runningTime * 1000) + " ms")
 
     outputFile.close()
 
@@ -87,11 +92,11 @@ def generateActivePaths(originalG, inputMatrix):
     # For each time stamp t
     for t in range(TS):
 
-        # Start timer to measure running time
-        start = timeit.default_timer()
-
         # Get list of active nodes
         activeNodesList = getActiveNodesList(inputMatrix, t)
+
+        # Start timer to measure running time
+        start = timeit.default_timer()
 
         # initialize visited nodes list. NOTE: only active nodes will be added here.
         visitedNodes = set()
@@ -158,9 +163,8 @@ def generateActivePaths(originalG, inputMatrix):
         # Measure running time
         runningTime = stop - start
 
-        # outputFile.write("\tRunning time: " + str(runningTime) + "\n")
+        outputFile.write("\tRunning time per time stamp: " + str(runningTime * 1000) + " ms" + "\n")
         outputFile.write("--------------------------------------------------\n")
-
 
 
 # Transform input file CSV into a matrix of 1's and 0's indicating active and inactive nodes respectively

@@ -8,10 +8,10 @@ import numpy as np
 graphPath = str(sys.argv[1])
 
 # percentage of active nodes across the matrix
-density = 0.9
+density = 0.1
 
 # Number of time steps
-TS = 100
+TS = 1000
 
 # File name prefix
 tStamp = datetime.datetime.now().strftime('%m-%d--%H-%M-%S').format()
