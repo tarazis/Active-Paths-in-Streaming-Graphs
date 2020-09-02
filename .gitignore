@@ -1,7 +1,8 @@
 
 .idea/vcs.xml
 .idea/workspace.xml
-*.txt
 *.csv
+*.txt
+!DataPerGraph.txt
 POC/Archive.zip
 POC/Graphs.zip

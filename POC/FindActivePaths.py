@@ -16,7 +16,7 @@ For each time stamp:
 
     Write the list of active components in an output file
 
-    Note: The current implementation is slow because it assumes a connected graph
+    **Note**: The current implementation is slow because it assumes a connected graph
           Time complexity: O(numOfActiveNodes * (U + V)) which is worst case O(N^2).
           This is slow because multiple BFS run for each active component. To fix this issue, modify the BFS
           implementation to account for a disconnected graph. this is a TODO.
@@ -104,7 +104,8 @@ def generateActivePaths(originalG, inputMatrix):
         # List of active components
         listOfActiveComponents = []
 
-        # BFS to explore active nodes using the original graph
+        # For each unvisited active node, run a BFS to find active connected component
+        # Note: this is slow for disconnected graphs because it runs BFS multiple times per time stamp
         while len(activeNodesList) > 0:
             # Choose node uniformly at random from list of active nodes
             currentRandomNode = random.sample(activeNodesList, 1)[0]
@@ -115,6 +116,7 @@ def generateActivePaths(originalG, inputMatrix):
             # Mark node as visited
             visitedNodes.add(str(currentRandomNode))
 
+            # BFS to explore active nodes using the original graph
             while len(queue) > 0:
                 # Find node first in the queue
                 currentNode = queue[0]

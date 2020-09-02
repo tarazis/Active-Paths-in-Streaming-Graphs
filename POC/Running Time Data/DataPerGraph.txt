@@ -1,0 +1,113 @@
+Graphs to Create:
+
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 000, density = 0.05, running time = 13.491208999999893 ms
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 100, density = 0.1, running time  =  20.020510000000047 ms
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 100, density = 0.2, running time  =  56.65495500000006  ms
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 100, density = 0.3, running time  =  69.025381 ms
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 100, density = 0.4, running time  =  82.87337299999997  ms
+GraphN = 100, GraphK = 8, graphP = 0.001, TS = 100, density = 0.5, running time  =  103.26232300000004 ms
+
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.05, running time = 13.277232999999944 ms
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.1, running time  =  13.277232999999944 ms
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.2, running time  =  27.02499799999991 ms
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.3, running time  =  43.37601499999999 ms
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.4, running time  =  79.45537400000002 ms
+GraphN = 100, GraphK = 8, graphP = 0.01, TS = 100, density = 0.5, running time  =  64.97974200000001 ms
+
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 100, density = 0.05, running time = 12.716332999999969 ms
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 100, density = 0.1, running time  = 15.316160999999995 ms
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 100, density = 0.2, running time  = 23.30292300000003  ms
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 100, density = 0.3, running time  = 41.929601999999955 ms
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 1000, density = 0.4, running time = 62.57099500000007  ms
+GraphN = 100, GraphK = 8, graphP = 0.1, TS = 100, density = 0.5, running time  = 68.80071700000001 ms
+--------
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 000, density = 0.05, running time =  66.381099 ms
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.1, running time  =  127.49190500000007 ms
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.2, running time  =  220.784031 ms
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.3, running time  =  377.68038199999987 ms
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.4, running time  =  529.393512 ms
+GraphN = 1000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.5, running time  =  575.906103 ms
+
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.05, running time = 77.38503200000002 ms
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.1, running time  =  129.753444 ms
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.2, running time  =  223.16650700000007 ms
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.3, running time  =  365.48209500000006 ms
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.4, running time  =  465.1262749999999 ms
+GraphN = 1000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.5, running time  =  721.212486 ms
+
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.05, running time = 77.99221700000003 ms
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.1, running time = 125.43524400000006 ms
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.2, running time = 215.80462899999997 ms
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.3, running time = 326.33552500000007 ms
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 1000, density = 0.4, running time = 372.47181000000007 ms
+GraphN = 1000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.5, running time =  540.144634 ms
+---
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 000, density = 0.05, running time = 782.5544870000001 ms
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.1, running time = 1644.364466 ms
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.2, running time = 4570.195228 ms
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.3, running time = 6239.978479 ms
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.4, running time = 7080.6079749999995 ms
+GraphN = 10000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.5, running time = 9461.810862 ms
+
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.05, running time = 804.455116 ms
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.1, running time = 1634.5870060000003 ms
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.2, running time = 4522.648201 ms
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.3, running time = 6294.889663999999 ms
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.4, running time = 6632.006101 ms
+GraphN = 10000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.5, running time = 8579.450256000001 ms
+
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.05, running time = 763.151022 ms
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.1, running time = 1564.0643969999999 ms
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.2, running time = 4062.852247 ms
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.3, running time = 4232.262947000001 ms
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 1000, density = 0.4, running time = 4396.88443 ms
+GraphN = 10000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.5, running time = 5993.392037 ms
+---------
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.05, running time = 44095.012388 ms
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.1, running time  = 115040.689714 ms
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.2, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.3, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.4, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.5, running time  =
+
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.05, running time = 41257.889146 ms
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.1, running time  = 117998.98188 ms
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.2, running time  = 333551.936527 ms
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.3, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.4, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.5, running time  =
+
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.05, running time = 41032.802019 ms
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.1, running time  = 111792.518043 ms
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.2, running time  = 288210.441169 ms
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.3, running time  =
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 1000, density = 0.4, running time =
+GraphN = 100000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.5, running time  =
+------
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 000, density = 0.05, running time = 3219312.6469860002 ms
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.1, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.2, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.3, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.4, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.001, TS = 100, density = 0.5, running time  =
+
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.05, running time =
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.1, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.2, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.3, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.4, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.01, TS = 100, density = 0.5, running time  =
+
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.05, running time = 3325551.5309150 ms
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.1, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.2, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.3, running time  =
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 1000, density = 0.4, running time =
+GraphN = 1000000, GraphK = 8, graphP = 0.1, TS = 100, density = 0.5, running time  =
+
+
+
+
+
+
+

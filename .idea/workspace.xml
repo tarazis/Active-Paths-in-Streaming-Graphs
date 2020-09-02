@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e2fdedd-930e-419b-ad7d-47a4e9561358" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/POC/DensityGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/DensityGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/GenerateGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/GenerateGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POC/RandomWalksGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/RandomWalksGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/FindActivePaths.py" beforeDir="false" afterPath="$PROJECT_DIR$/POC/FindActivePaths.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POC/FindActivePathsImproved.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +31,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/POC/Running Time Data" />
       <recent name="$PROJECT_DIR$/POC/GRAPH_TEST" />
       <recent name="$PROJECT_DIR$/POC" />
       <recent name="$PROJECT_DIR$/POC/previous-versions" />
       <recent name="$PROJECT_DIR$/util" />
-      <recent name="$PROJECT_DIR$/heavy-hitter-app" />
     </key>
   </component>
   <component name="RunDashboard">
